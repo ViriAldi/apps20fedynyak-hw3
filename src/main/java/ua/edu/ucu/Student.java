@@ -36,4 +36,12 @@ class Student {
         return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
     }
 
+    @Override
+    public boolean equals(Object other){
+        if (!(other instanceof Student)){
+            return false;
+        }
+        return (other.toString().equals(toString()));
+    }
+
 }
